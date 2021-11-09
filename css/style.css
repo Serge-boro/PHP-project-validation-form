@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: royalblue;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+ul li {
+  list-style-type: none;
+  padding: 0.5rem;
+}
+a {
+  text-decoration: none;
+}
+/* ############
+ HERO PAGE
+###############*/
+.hero-page_title {
+  position: relative;
+  background: url('../img/start2.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero_text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(115, 55, 226);
+  font-size: 2.5rem;
+  width: 1600px;
+  height: 300px;
+  background: linear-gradient(rgba(197, 106, 228, 0.5), rgba(77, 66, 66, 0.2));
+  border-radius: 50%;
+}
+.hero_text p {
+  margin-top: 4rem;
+}
+.hero_text p span {
+  color: rgb(172, 26, 128);
+}
+.refer a {
+  margin: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(148, 101, 101, 0.2));
+  border: #fff solid 0.2rem;
+  padding: 3rem;
+  color: rgb(183, 81, 224);
+  border-radius: 20%;
+  font-size: 3rem;
+  text-align: center;
+}
+.refer a:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(148, 101, 101, 0.8));
+}
+/* ##############
+  board
+################*/
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+label {
+  color: rgb(255, 255, 255);
+}
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  width: 450px;
+  margin: 0 auto;
+  padding: 100px 50px;
+  box-shadow: -1px 9px 27px 5px rgba(0, 0, 0, 0.75);
+}
+.autoriz {
+  text-align: center;
+}
+.img-container {
+  background: url('../img/developer-api.jpg') center/cover no-repeat;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+form {
+  margin-top: 32px;
+  text-align: center;
+}
+input {
+  width: 300px;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+input:focus {
+  outline: 0;
+}
+p {
+  text-align: center;
+}
+.register-button {
+  background: orange;
+  color: #fff;
+}
+
+.container-mainPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.split.left {
+  left: 0;
+}
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+.split.right {
+  right: 0;
+}
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #fff; */
+}
+.video-container {
+  width: 100vw;
+}
+.btn {
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 15rem;
+  padding: 1.5rem;
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+}
+.hover-left .left {
+  width: var(--hover-width);
+}
+.hover-left .right {
+  width: var(--other-width);
+}
+.hover-right .right {
+  width: var(--hover-width);
+}
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 15%;
+  }
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+    left: 35%;
+  }
+  .hero_text {
+    width: 600px;
+    font-size: 1.5rem;
+  }
+  .hero_text p {
+    margin-top: 5rem;
+  }
+
+  .refer {
+    margin-top: 15rem;
+  }
+  .refer a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ################
+    Weather
+##################*/
+.container-weather {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  text-align: center;
+}
+.main-block {
+  background: rgb(199, 187, 240);
+  width: 400px;
+  height: 500px;
+  padding: 1rem;
+}
+.info {
+  margin: 1rem;
+}
+.date {
+  font-size: 0.75rem;
+}
+.city {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.weather-form {
+  display: flex;
+  flex-direction: column;
+}
+.input-weather {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: block;
+  background-color: #c4a5f6;
+  border-radius: 10px;
+  border-color: rgb(183, 81, 224);
+  color: rgb(75, 73, 73);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(180, 146, 194, 0.979),
+    0 15px 40px rgba(142, 55, 200, 0.842);
+}
+.input-weather::placeholder {
+  color: rgb(68, 68, 68);
+}
+.input-weather:focus {
+  outline: none;
+}
+.btn-weather {
+  text-decoration: none;
+  color: rgb(90, 86, 105);
+  border: rgb(146, 110, 212) solid 0.1rem;
+  background-color: #c4a5f6;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 15rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.btn-weather:active {
+  transform: scale(0.98);
+}
+.info_add {
+  display: flex;
+  margin-top: 2rem;
+}
+.pictures img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 3rem;
+}
+.grad {
+  font-size: 3.5rem;
+}
+.block {
+  display: flex;
+  margin: 1rem 3rem;
+}
+.header {
+  margin-top: -4rem;
+}
+.header-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  color: rgb(199, 187, 240);
+}
+.header-text a {
+  background: rgb(199, 187, 240);
+  width: 100px;
+  height: 35px;
+  color: rgba(142, 55, 200, 0.842);
+  border: #fff solid 0.2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  .container-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+  }
+  .main-block {
+    background: rgb(199, 187, 240);
+    width: 500px;
+    height: 400px;
+    z-index: 2;
+  }
+
+  .main-block_info {
+    width: 50%;
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: center;
+  }
+  .date {
+    margin-left: 0.3rem;
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  .sity {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+  .info-weather {
+    width: 50%;
+    margin-top: -5rem;
+  }
+  .weather-form {
+    position: relative;
+    left: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+  .input-weather {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: block;
+    background-color: #c4a5f6;
+    border-radius: 10px;
+    border-color: rgb(183, 81, 224);
+    color: rgb(75, 73, 73);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(180, 146, 194, 0.979),
+      0 15px 40px rgba(142, 55, 200, 0.842);
+  }
+  .input-weather::placeholder {
+    color: rgb(68, 68, 68);
+  }
+  .input-weather:focus {
+    outline: none;
+  }
+  .btn-weather {
+    text-decoration: none;
+    color: rgb(90, 86, 105);
+    border: rgb(146, 110, 212) solid 0.1rem;
+    background-color: #c4a5f6;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 15rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+  }
+  .btn-weather:active {
+    transform: scale(0.98);
+  }
+
+  .info_add {
+    display: flex;
+    margin-top: -1rem;
+  }
+  .pictures img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem;
+  }
+  .grad {
+    font-size: 2.5rem;
+  }
+  .feel {
+    text-align: left;
+  }
+  .feels {
+    margin-left: 1rem;
+  }
+  .info_small {
+    display: flex;
+    justify-content: space-around;
+  }
+  .block {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
